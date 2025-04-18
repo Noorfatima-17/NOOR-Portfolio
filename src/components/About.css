@@ -1,0 +1,48 @@
+.about {
+    padding: 100px 20px;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    animation: fadeInUp 1.2s ease;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #5a5aff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  
+  .about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    padding: 0 20px;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
