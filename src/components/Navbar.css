@@ -1,0 +1,83 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00ffe5;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Open state animation */
+.bar1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar2 {
+  opacity: 0;
+}
+.bar3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #111;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    gap: 20px;
+    align-items: center;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,48 +1,125 @@
-.about {
-    padding: 100px 20px;
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
-    animation: fadeInUp 1.2s ease;
+.about-container {
+  background-color: #0f172a;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  padding-bottom: 4rem;
+}
+
+/* Skills Bar */
+.skills-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #1e293b;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  border-bottom: 1px solid #334155;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.skills-bar:hover {
+  box-shadow: 0 0 15px #00ffe5;
+  border-radius: 10px;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #f97316;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px auto 0;
+  background: linear-gradient(to right, #00ffe5, #00b7ff);
+  border-radius: 10px;
+  animation: glowline 2s infinite ease-in-out;
+}
+
+.about-text {
+  max-width: 650px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.about-me span {
+  color: #00ffe5;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes glowline {
+  0%, 100% {
+    opacity: 0.5;
   }
-  
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .skills-bar {
+    gap: 1.2rem;
+    font-size: 0.95rem;
+    padding: 0.8rem 0;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .skills-bar {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
     text-align: center;
   }
-  
-  .section-title {
-    font-size: 38px;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    position: relative;
+
+  .about-heading {
+    font-size: 1.6rem;
   }
-  
-  .section-title::after {
-    content: '';
-    width: 60px;
-    height: 3px;
-    background-color: #5a5aff;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 5px;
-  }
-  
+
   .about-text {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #444;
-    padding: 0 20px;
+    font-size: 0.9rem;
+    padding: 0 1rem;
   }
-  
-  /* Animation */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}

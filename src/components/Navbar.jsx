@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Navbar.css';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="navbar">
-      <div className="logo">
-        <h1>Noor</h1>
+      <div className="logo">Noor</div>
+
+      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
+        <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+        <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
       </div>
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
+
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        <div className={`bar ${isOpen ? 'bar1' : ''}`}></div>
+        <div className={`bar ${isOpen ? 'bar2' : ''}`}></div>
+        <div className={`bar ${isOpen ? 'bar3' : ''}`}></div>
+      </div>
     </nav>
   );
 };
