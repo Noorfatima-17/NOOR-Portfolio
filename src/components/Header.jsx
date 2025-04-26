@@ -6,8 +6,7 @@ function Header() {
     <section className="hero">
       <div className="hero-inner">
         <h1 className="glow-heading">Hi, I'm Noor</h1>
-        <p className="typing">Frontend Developer | Creative Designer</p>
-
+        <p className="typing">Frontend Developer ✨</p>
         <div className="hero-buttons">
           <a className="neon-btn" href="#projects">View Projects</a>
           <a className="neon-btn" href="#contact">Contact Me</a>

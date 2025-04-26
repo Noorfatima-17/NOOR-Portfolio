@@ -18,9 +18,7 @@ function App() {
       <Contact />
       <Footer />
 
-      <footer className="footer">
-        <p>© 2025 Noor | Contact: noor@example.com</p>
-      </footer>
+     
     </>
   );
 }
