@@ -60,4 +60,25 @@
   .footer-bottom {
     font-size: 0.7rem;
   }
+
+
+
+  @media (max-width: 600px) {
+    .footer {
+      padding: 40px 15px 20px; /* mobile par kam padding */
+    }
+  
+    .footer-logo {
+      font-size: 1.8rem; /* thoda chhota font mobile pe */
+    }
+  
+    .footer-tagline {
+      font-size: 0.9rem;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.75rem;
+    }
+  }
+  
 }

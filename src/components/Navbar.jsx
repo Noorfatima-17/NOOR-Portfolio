@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Noor</div>
+      <div className="logo">Noor Portfolio</div>
 
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
